@@ -1,0 +1,198 @@
+/* Reseteo y estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f7fa;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+/* Estilos del formulario */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox label {
+    margin-left: 10px;
+    margin-bottom: 0;
+}
+
+.error-message {
+    display: none;
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.error-message.visible {
+    display: block;
+}
+
+.helper-text {
+    display: block;
+    font-size: 12px;
+    color: #7f8c8d;
+    margin-top: 5px;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+/* Estilos para la página de confirmación */
+.confirmation h1 {
+    color: #27ae60;
+}
+
+.user-info-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 6px;
+    margin: 30px 0;
+}
+
+.user-info p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.button {
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.button.primary {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.button.primary:hover {
+    background-color: #2980b9;
+}
+
+.button.secondary {
+    background-color: #ecf0f1;
+    color: #2c3e50;
+}
+
+.button.secondary:hover {
+    background-color: #bdc3c7;
+}
+
+/* Estilos para campos inválidos */
+input.invalid {
+    border-color: #e74c3c;
+}
+
+/* Estilos para consejos de seguridad */
+.security-tips {
+    margin: 30px 0;
+    padding: 15px;
+    background-color: #e8f4fc;
+    border-left: 4px solid #3498db;
+    border-radius: 4px;
+}
+
+.security-tips h3 {
+    color: #2980b9;
+    margin-bottom: 10px;
+}
+
+.security-tips ul {
+    margin-left: 20px;
+}
+
+.security-tips li {
+    margin: 8px 0;
+    color: #34495e;
+}
+
+/* Animación para errores */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-5px); }
+    40%, 80% { transform: translateX(5px); }
+}
+
+.shake {
+    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}

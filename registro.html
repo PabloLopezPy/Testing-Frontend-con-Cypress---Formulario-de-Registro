@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario de Registro</h1>
+        <form id="registroForm" novalidate>
+            <div class="form-group">
+                <label for="nombre">Nombre completo *</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <span class="error-message" data-error="nombre"></span>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Correo electrónico *</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error-message" data-error="email"></span>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Contraseña *</label>
+                <input type="password" id="password" name="password" required>
+                <span class="error-message" data-error="password"></span>
+                <small class="helper-text">Mínimo 8 caracteres, al menos una letra mayúscula, una minúscula y un número</small>
+            </div>
+            
+            <div class="form-group">
+                <label for="confirmPassword">Confirmar contraseña *</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                <span class="error-message" data-error="confirmPassword"></span>
+            </div>
+            
+            <div class="form-group">
+                <label for="fechaNacimiento">Fecha de nacimiento</label>
+                <input type="date" id="fechaNacimiento" name="fechaNacimiento">
+                <span class="error-message" data-error="fechaNacimiento"></span>
+            </div>
+            
+            <div class="form-group checkbox">
+                <input type="checkbox" id="terminos" name="terminos" required>
+                <label for="terminos">Acepto los términos y condiciones *</label>
+                <span class="error-message" data-error="terminos"></span>
+            </div>
+            
+            <div class="form-group">
+                <button type="submit" id="submitBtn">Registrarse</button>
+            </div>
+        </form>
+    </div>
+    
+    <script src="validator.js"></script>
+</body>
+</html>

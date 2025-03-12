@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Exitoso</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container confirmation">
+        <h1>¡Bienvenido, <span id="userName"></span>!</h1>
+        <p>Tu registro ha sido completado exitosamente.</p>
+        
+        <div class="user-info-container">
+            <h2>Información registrada:</h2>
+            <div class="user-info">
+                <p><strong>Nombre:</strong> <span id="userNameDisplay"></span></p>
+                <p><strong>Correo electrónico:</strong> <span id="userEmail"></span></p>
+                <p><strong>Fecha de nacimiento:</strong> <span id="userBirthdate"></span></p>
+            </div>
+        </div>
+        
+        <div class="security-tips">
+            <h3>Recomendaciones de seguridad:</h3>
+            <ul>
+                <li>No compartas tu contraseña con nadie</li>
+                <li>Activa la autenticación de dos factores cuando esté disponible</li>
+                <li>Revisa regularmente la actividad de tu cuenta</li>
+                <li>Cierra sesión cuando utilices dispositivos compartidos</li>
+            </ul>
+        </div>
+        
+        <div class="button-container">
+            <a href="registro.html" class="button secondary">Volver al inicio</a>
+            <a href="#" class="button primary" id="continueBtn">Continuar al área de usuario</a>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Recuperar datos del localStorage
+            const userData = JSON.parse(localStorage.getItem('userData'));
+            
+            if (userData) {
+                // Mostrar datos en la página
+                document.getElementById('userName').textContent = userData.nombre;
+                document.getElementById('userNameDisplay').textContent = userData.nombre;
+                document.getElementById('userEmail').textContent = userData.email;
+                
+                if (userData.fechaNacimiento) {
+                    document.getElementById('userBirthdate').textContent = userData.fechaNacimiento;
+                } else {
+                    document.getElementById('userBirthdate').textContent = 'No especificada';
+                }
+            } else {
+                // Redireccionar si no hay datos
+                window.location.href = 'registro.html';
+            }
+            
+            // Evento para el botón de continuar
+            document.getElementById('continueBtn').addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('Funcionalidad del área de usuario no implementada en esta versión');
+            });
+        });
+    </script>
+</body>
+</html>
